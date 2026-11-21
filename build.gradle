@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'ru.netology'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
+    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine'
+
+    implementation 'mysql:mysql-connector-java:8.0.33'
+
+    // Если используешь Selenide для UI-тестов входа:
+    testImplementation 'com.codeborne:selenide:7.4.2'
+}
+test {
+    useJUnitPlatform()
+}
