@@ -1,0 +1,16 @@
+package ru.netology;
+
+import com.codeborne.selenide.SelenideElement;
+
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.$;
+
+public class DashboardPage {
+    // опечатка была в data-test-id: dashbord → dashboard
+    private final SelenideElement heading = $("[data-test-id=dashboard]");
+
+    public DashboardPage() {
+        heading.shouldBe(visible).shouldHave(text("Личный кабинет"));
+    }
+}
