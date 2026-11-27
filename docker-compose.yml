@@ -14,9 +14,5 @@ services:
       MYSQL_DATABASE: app
       MYSQL_USER: app
       MYSQL_PASSWORD: pass
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
-      timeout: 10s
-      retries: 10
 volumes:
   mysql-data:
